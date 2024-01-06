@@ -5,6 +5,11 @@ public class SliderSpeedScript : MonoBehaviour
 {
     public MovementController movementController;
 
+    private void Start()
+    {
+        SetSpeed();
+    }
+
     public void SetSpeed()
     {
         if (movementController != null)

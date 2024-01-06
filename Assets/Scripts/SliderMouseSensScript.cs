@@ -7,6 +7,11 @@ public class SliderMouseSensScript : MonoBehaviour
 {
     public MovementController movementController;
 
+    private void Start()
+    {
+        SetSensitivty();
+    }
+
     public void SetSensitivty()
     {
         if (movementController != null)
