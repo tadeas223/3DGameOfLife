@@ -15,7 +15,6 @@ public class PointGrid : MonoBehaviour
     public int[] rule;
     public InputField ruleSetter;
 
-    public Text buttonText;
     public Slider slider;
 
     public Dictionary<Vector3, GameObject> points = new Dictionary<Vector3, GameObject>();
@@ -41,7 +40,7 @@ public class PointGrid : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            PlayButton();
+            play = !play;
         }
         if (play)
         {
@@ -71,12 +70,6 @@ public class PointGrid : MonoBehaviour
             Destroy(points[pos]);
             points.Remove(pos);
         }
-    }
-
-    public void PlayButton()
-    {
-        play = !play;
-        buttonText.text = play ? "stop" : "play";
     }
 
     public void UpdateRule()

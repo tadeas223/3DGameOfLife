@@ -9,25 +9,21 @@ public class MovementController : MonoBehaviour
     public GameObject cam;
 
     private Vector2 currentRotation;
-    private bool doRotate = false;
+    private bool lockMovement = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Initiate any setup logic if needed
+        SetLockState();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
-        if (doRotate)
+        if (!lockMovement)
         {
             Rotate();
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            UnsetLockState();
+            Move();
         }
     }
 
@@ -52,12 +48,12 @@ public class MovementController : MonoBehaviour
     public void SetLockState()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        doRotate = true;
+        lockMovement = false;
     }
 
     public void UnsetLockState()
     {
         Cursor.lockState = CursorLockMode.None;
-        doRotate = false;
+        lockMovement = true;
     }
 }
