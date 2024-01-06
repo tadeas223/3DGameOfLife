@@ -1,16 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SliderSpeedScript : MonoBehaviour
+public class SliderMouseSensScript : MonoBehaviour
 {
     public MovementController movementController;
 
     private void Start()
     {
-        SetSpeed();
+        SetSensitivty();
     }
 
-    public void SetSpeed()
+    public void SetSensitivty()
     {
         if (movementController != null)
         {
@@ -18,7 +20,7 @@ public class SliderSpeedScript : MonoBehaviour
 
             if (slider != null)
             {
-                movementController.speed = slider.value;
+                movementController.sensitivity = slider.value;
             }
             else
             {
