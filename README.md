@@ -27,7 +27,7 @@ Here is the explanation of the rule from a study linked here - https://wpmedia.w
 ![rule1.png](images%2Frule1.png)
 ![rule2.png](images%2Frule2.png)
 
-The rule can be only have 4 digits. So the maximum rule can be R=(9999). Even though rules higher than R=(9999) could lead to an interesting result, but I was to lazy to implement that.
+The rule can only have 4 digits. So the maximum rule can be R=(9999). Even though rules higher than R=(9999) could lead to an interesting result, but I was to lazy to implement that.
 
 ## Exiting the game
 You can exit the game by clicking the exit button from settings or ALT+F4
